@@ -12,3 +12,12 @@ else
 
    exit 1
 fi
+
+# If the functions.sh file exists, source it.
+if [[ -e ./includes/globals/functions.sh ]]; then
+   source ./includes/globals/functions.sh
+else
+   printf "The file functions.sh does not exist. This script requires it. Exiting...\n"
+
+   exit 1
+fi
