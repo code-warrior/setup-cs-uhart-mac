@@ -35,7 +35,7 @@ function print_msg () {
       "log" )
          # then check the second argument, starting by verifying that it’s got a length greater than 0
          if [[ -n "$2" ]]; then
-            printf "%s > %s %s\n" "${BG_GREEN}${BLACK}${BOLD}" "$2" "${RESET}"
+            printf "%s > %s %s\n" "${BG_WHITE}${BLACK}${BOLD}" "$2" "${RESET}"
          else
             print_error_msg "$1"
          fi
