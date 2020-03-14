@@ -59,7 +59,7 @@ function print_msg () {
          fi
          ;;
 
-      # Handle the case where the first argument is empty or not one of “log”, “warn”, or ”error”.
+      # Handle the case where the first argument is empty or isn’t one of “log”, “warn”, or ”error”.
       "" | * )
          printf "%s \n" "${BG_RED}${WHITE}${BOLD} ERROR: The function ${RESET}${BG_WHITE}${BLACK} ${FUNCNAME[0]} ${RESET}${BG_RED}${WHITE}${BOLD} requires two arguments: log, warn, or error as its first, and the string you’d "\
          " like to render as its second. For example, ${RESET}${BG_WHITE}${BLACK} print_msg \"log\" \"Content here.\"" "${RESET}"
