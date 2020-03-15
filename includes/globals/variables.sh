@@ -6,3 +6,7 @@ OS_NAME="Mac OS "
 # Retrieve from the system configuration utility the computer name, found in System
 # Preferences | Sharing | Computer Name.
 COMP_NAME="$(scutil --get ComputerName)"
+
+# Retrieve from the system configuration utility the local network host name, found
+# in System Preferences | Sharing | Computer Name.
+LOCAL_HOST_NAME="$(scutil --get LocalHostName)"
