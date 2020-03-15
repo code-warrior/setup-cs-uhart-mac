@@ -15,9 +15,9 @@ LOCAL_HOST_NAME="$(scutil --get LocalHostName)"
 OS_VERSION="$(sw_vers -productVersion)"
 
 # Semver OS number parsing
-MAJOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 1)"
+#MAJOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 MINOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 2)"
-PATCH_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 3)"
+#PATCH_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 
 # Retrieve the hostname info, including domain.
 HOST_NAME="$(hostname)"
