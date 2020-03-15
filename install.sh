@@ -50,3 +50,17 @@ print_msg "log" "Local hostname:   $LOCAL_HOST_NAME"
 print_msg "log" "Full hostname:    $HOST_NAME"
 print_msg "log" "Long user name:   $FULL_NAME"
 print_msg "log" "Short user name:  $USER_NAME"
+
+#####################################################################################
+# Do a quiet (-q) grep word search (-w) for “admin” privileges in the list of groups
+# to which the current user belongs. If they are an admin, proceed quietly.
+#####################################################################################
+if echo "$GROUPS_TO_WHICH_USER_BELONGS" | grep -q -w admin; then
+   echo "" > /dev/null
+else
+   print_msg "error" " "
+   print_msg "error" "The current user does not have administrator privileges. This program must be run "
+   print_msg "error" "by a user with admin privileges. Exiting..."
+
+   exit 1
+fi
