@@ -39,3 +39,14 @@ fi
 
 sudo -p "Enter your password, which, for security purposes, won’t be repeated in "\
 "The Terminal as you type it: " echo "${BG_GREEN}${BLACK} > Thank you! ${RESET}"
+
+print_msg "log" " "
+print_msg "log" "Your current setup is: "
+print_msg "log" " "
+print_msg "log" "Operating System: $OS_NAME $OS_VERSION"
+print_msg "log" "Shell:            $USER_SHELL"
+print_msg "log" "Computer name:    $COMP_NAME"
+print_msg "log" "Local hostname:   $LOCAL_HOST_NAME"
+print_msg "log" "Full hostname:    $HOST_NAME"
+print_msg "log" "Long user name:   $FULL_NAME"
+print_msg "log" "Short user name:  $USER_NAME"
