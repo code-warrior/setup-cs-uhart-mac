@@ -63,3 +63,12 @@ else
 
    exit 1
 fi
+
+#####################################################################################
+# Install (i) all (a) available software updates.
+#####################################################################################
+print_msg "log" "Running software update... "
+print_msg "log" " "
+sudo softwareupdate -ia
+print_msg "log" " "
+print_msg "log" "Software update has been run."
