@@ -10,3 +10,7 @@ COMP_NAME="$(scutil --get ComputerName)"
 # Retrieve from the system configuration utility the local network host name, found
 # in System Preferences | Sharing | Computer Name.
 LOCAL_HOST_NAME="$(scutil --get LocalHostName)"
+export MINIMUM_MAC_OS
+export OS_NAME
+export COMP_NAME
+export LOCAL_HOST_NAME
