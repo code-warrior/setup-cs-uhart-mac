@@ -19,7 +19,7 @@ MAJOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 MINOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 2)"
 PATCH_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 
-# Print the hostname info, including domain.
+# Retrieve the hostname info, including domain.
 HOST_NAME="$(hostname)"
 export MINIMUM_MAC_OS
 export OS_NAME
