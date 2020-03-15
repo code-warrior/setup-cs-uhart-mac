@@ -31,6 +31,11 @@ GROUPS_TO_WHICH_USER_BELONGS="$(id -Gn "$USER_NAME")"
 # Retrieve the first and last names of the user by fingering him, then printing
 # the 4th and 5th tokens on the line containing “Name”.
 FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
+
+# Retrieve the shell associated with the user in a similar fashion to how their full
+# name was retrieved above.
+USER_SHELL="$(finger "$USER_NAME" | awk '/Shell:/ {print $4}')"
+
 export MINIMUM_MAC_OS
 export OS_NAME
 export COMP_NAME
@@ -41,3 +46,4 @@ export HOST_NAME
 export USER_NAME
 export GROUPS_TO_WHICH_USER_BELONGS
 export FULL_NAME
+export USER_SHELL
