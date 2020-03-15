@@ -18,9 +18,13 @@ OS_VERSION="$(sw_vers -productVersion)"
 MAJOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 MINOR_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 2)"
 PATCH_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 3)"
+
+# Print the hostname info, including domain.
+HOST_NAME="$(hostname)"
 export MINIMUM_MAC_OS
 export OS_NAME
 export COMP_NAME
 export LOCAL_HOST_NAME
 export OS_VERSION
 export MINOR_OS_NUMBER
+export HOST_NAME
