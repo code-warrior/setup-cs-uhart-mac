@@ -21,6 +21,9 @@ PATCH_OS_NUMBER="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 
 # Retrieve the hostname info, including domain.
 HOST_NAME="$(hostname)"
+
+# Retrieve the name/ID of the user.
+USER_NAME="$(id -un)"
 export MINIMUM_MAC_OS
 export OS_NAME
 export COMP_NAME
@@ -28,3 +31,4 @@ export LOCAL_HOST_NAME
 export OS_VERSION
 export MINOR_OS_NUMBER
 export HOST_NAME
+export USER_NAME
