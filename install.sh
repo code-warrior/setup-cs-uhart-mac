@@ -37,8 +37,7 @@ else
    fi
 fi
 
-sudo -p "Enter your password, which, for security purposes, won’t be repeated in "\
-"The Terminal as you type it: " echo "${BG_GREEN}${BLACK} > Thank you! ${RESET}"
+sudo -p "Enter your password, which, for security purposes, won’t be repeated in The Terminal as you type it: " echo "${BG_GREEN}${BLACK} > Thank you! ${RESET}"
 
 print_msg "log" " "
 print_msg "log" "Your current setup is: "
