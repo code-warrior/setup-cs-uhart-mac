@@ -11,7 +11,7 @@ COMP_NAME="$(scutil --get ComputerName)"
 # in System Preferences | Sharing | Computer Name.
 LOCAL_HOST_NAME="$(scutil --get LocalHostName)"
 
-## Retrieve the numerical portion of the macOS (or Mac OS) software version
+## Retrieve the numerical portion of the macOS (or Mac OS) software version.
 OS_VERSION="$(sw_vers -productVersion)"
 
 # Semver OS number parsing
