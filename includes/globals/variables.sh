@@ -24,6 +24,9 @@ HOST_NAME="$(hostname)"
 
 # Retrieve the name/ID of the user.
 USER_NAME="$(id -un)"
+
+# Retrieve the list of groups to which the current user belongs.
+GROUPS_TO_WHICH_USER_BELONGS="$(id -Gn "$USER_NAME")"
 export MINIMUM_MAC_OS
 export OS_NAME
 export COMP_NAME
@@ -32,3 +35,4 @@ export OS_VERSION
 export MINOR_OS_NUMBER
 export HOST_NAME
 export USER_NAME
+export GROUPS_TO_WHICH_USER_BELONGS
