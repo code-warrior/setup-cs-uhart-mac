@@ -72,3 +72,8 @@ print_msg "log" " "
 sudo softwareupdate -ia
 print_msg "log" " "
 print_msg "log" "Software update has been run."
+print_msg "log" "Setting OS configurations..."
+
+print_msg "log" "Enabling the following features when clicking the clock in the upper "
+print_msg "log" "right hand corner of the login window: Host name, OS version number, and IP address."
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
