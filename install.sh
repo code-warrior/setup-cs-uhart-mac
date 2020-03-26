@@ -86,3 +86,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 print_msg "log" "Show Status Bar (below Path Bar) in Finder."
 defaults write com.apple.finder ShowStatusBar -bool true
+
+print_msg "log" "Hide/show the Dock when the mouse hovers over the screen edge of the Dock."
+defaults write com.apple.dock autohide -bool true
