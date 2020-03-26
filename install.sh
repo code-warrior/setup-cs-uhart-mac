@@ -89,3 +89,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 print_msg "log" "Hide/show the Dock when the mouse hovers over the screen edge of the Dock."
 defaults write com.apple.dock autohide -bool true
+
+print_msg "log" "Use UTF-8 as input to The Terminal."
+defaults write com.apple.terminal StringEncodings -array 4
