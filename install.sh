@@ -92,3 +92,6 @@ defaults write com.apple.dock autohide -bool true
 
 print_msg "log" "Use UTF-8 as input to The Terminal."
 defaults write com.apple.terminal StringEncodings -array 4
+
+print_msg "log" "Display full POSIX path as Finder window title."
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
