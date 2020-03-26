@@ -80,3 +80,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 print_msg "log" "Show all filename extensions in Finder."
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+print_msg "log" "Show Path Bar (at the bottom of windows) in Finder."
+defaults write com.apple.finder ShowPathbar -bool true
