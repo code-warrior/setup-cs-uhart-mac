@@ -83,3 +83,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 print_msg "log" "Show Path Bar (at the bottom of windows) in Finder."
 defaults write com.apple.finder ShowPathbar -bool true
+
+print_msg "log" "Show Status Bar (below Path Bar) in Finder."
+defaults write com.apple.finder ShowStatusBar -bool true
