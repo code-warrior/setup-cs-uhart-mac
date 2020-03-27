@@ -149,3 +149,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 print_msg "log" "Expose the entire \"save\" panel (instead of collapsing it) when saving."
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+print_msg "log" "Expose the entire \"print\" panel (instead of collapsing it) when printing."
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
