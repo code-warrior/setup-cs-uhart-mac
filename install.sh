@@ -31,7 +31,7 @@ else
    if [[ "$MINOR_OS_NUMBER" -eq 11 ]]; then
       print_msg "warn" "Your OS is outdated. Consider upgrading before continuing."
    else
-      if [[ "$MINOR_OS_NUMBER" -gt 10 ]] && [[ "$MINOR_OS_NUMBER" -lt 15 ]]; then
+      if [[ "$MINOR_OS_NUMBER" -gt 10 ]] && [[ "$MINOR_OS_NUMBER" -lt 16 ]]; then
          OS_NAME="macOS"
       fi
    fi
