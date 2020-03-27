@@ -72,6 +72,50 @@ print_msg "log" " "
 sudo softwareupdate -ia
 print_msg "log" " "
 print_msg "log" "Software update has been run."
+
+#####################################################################################
+# Check OS version.
+#####################################################################################
+case ${OS_VERSION} in
+   *10.15* | *10.14* | *10.13* | *10.12* )
+      cmdline_version="CLTools_Executables"
+      ;;
+
+   *10.11*)
+      cmdline_version="CLTools_Executables" # Minimum version: El Capitán
+
+      print_msg "warning" "El Capitán (macOS 10.11.$PATCH_OS_NUMBER) is no longer supported by Apple, and is "
+      print_msg "warning" "the earliest macOS version this script supports. Consider upgrading before continuing."
+      ;;
+
+   *)
+      print_msg "error" "Sorry! You will have to upgrade your OS to $MINIMUM_MAC_OS or above to continue."
+
+      exit 1
+      ;;
+esac
+
+#####################################################################################
+# Check for command line tools.
+#####################################################################################
+print_msg "log" "Checking for XCode Command Line Tools..."
+
+#####################################################################################
+# If the command line tools have been installed, they would appear as
+# `com.apple.pkg.CLTools_Executables` in the result of `pkgutil --pkgs`. Similarly,
+# `pkgutil --pkgs=com.apple.pkg.CLTools_Executables` yields
+# `com.apple.pkg.CLTools_Executables`. Thus, if running the `pkgutil` command doesn’t
+# return a null string, then the tools have been installed.
+#####################################################################################
+if [[ -n "$(pkgutil --pkgs=com.apple.pkg.${cmdline_version})" ]]; then
+   print_msg "log" "Command Line Tools are installed!"
+else
+   print_msg "error" "Command Line Tools are not installed!"
+   print_msg "error" "Running 'xcode-select --install' Please click Install!"
+
+   xcode-select --install
+fi
+
 print_msg "log" "Setting OS configurations..."
 
 print_msg "log" "Enabling the following features when clicking the clock in the upper "
