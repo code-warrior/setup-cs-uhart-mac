@@ -65,7 +65,7 @@ else
 fi
 
 #####################################################################################
-# Install (i) all (a) available software updates.
+# Run software update, and, install (i) all (a) available packages.
 #####################################################################################
 print_msg "log" "Running software update... "
 print_msg "log" " "
