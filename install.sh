@@ -142,3 +142,7 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 print_msg "log" "Bring up a dialog box when the power button is held for 2 seconds."
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
+
+print_msg "log" "Request user’s password to wake from sleep or return from screen saver."
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
