@@ -146,3 +146,6 @@ defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 print_msg "log" "Request user’s password to wake from sleep or return from screen saver."
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+print_msg "log" "Expose the entire \"save\" panel (instead of collapsing it) when saving."
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
