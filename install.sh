@@ -153,7 +153,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 print_msg "log" "Expose the entire \"print\" panel (instead of collapsing it) when printing."
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
-echo "Restart affected applications."
+print_msg "log" "Restart affected applications."
 for app in Finder Dock SystemUIServer;
    do killall "$app" >/dev/null 2>&1;
 done
