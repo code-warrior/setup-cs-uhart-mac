@@ -200,6 +200,12 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
   -H 'sec-fetch-dest: document' \
   -H 'referer: https://vivaldi.com/' \
   -H 'accept-language: en-US,en;q=0.9'
+
+#####################################################################################
+# Install Homebrew
+#####################################################################################
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
