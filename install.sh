@@ -100,6 +100,31 @@ else
 fi
 
 #####################################################################################
+# Install typefaces
+#####################################################################################
+install_typeface "IBMPlexMono-Regular.ttf" \
+   "IBM Plex Mono" \
+   "https://fonts.google.com/download?family=IBM%20Plex%20Mono" \
+   "IBM_Plex_Mono.zip" \
+   "IBM_Plex_Mono"
+install_typeface "UbuntuMono-Regular.ttf" \
+   "Ubuntu Mono" \
+   "https://fonts.google.com/download?family=Ubuntu%20Mono" \
+   "Ubuntu_Mono.zip" \
+   "Ubuntu_Mono"
+install_typeface "Inconsolata-VariableFont_wdth,wght.ttf" \
+   "Inconsolata" \
+   "https://fonts.google.com/download?family=Inconsolata" \
+   "Inconsolata.zip" \
+   "Inconsolata"
+install_typeface \
+   "CourierPrime-Regular.ttf" \
+   "Courier Prime" \
+   "https://fonts.google.com/download?family=Courier%20Prime" \
+   "Courier_Prime.zip" \
+   "Courier_Prime"
+
+#####################################################################################
 # Set OS configurations
 #####################################################################################
 print_msg "log" "Setting OS configurations..."
