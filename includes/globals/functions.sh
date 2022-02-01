@@ -113,3 +113,63 @@ function install_typeface () {
       rm -fr "$4"
    fi
 }
+
+#
+# Fetches software via cURL and requires three parameters:
+#    The name of the software program (eg, Zoom)
+#    The name of the installer (eg, Zoom.pkg)
+#    The URL of the installer formatted for cURL calls (eg, https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg)
+#
+# Example usage:
+#    install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
+#
+function install () {
+   INSTALLER=$2
+
+   while true
+      do
+         echo " Would you like to install $1?"
+         read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}" -n 1 -r RESPONSE
+
+         case $RESPONSE in
+            [yY]* )
+               echo "Downloading $1..."
+               curl "$3" --compressed -o "$2"
+
+               echo "Opening $1... "
+               open "$2"
+
+               echo "You may or may not need to move $2 into the Applications folder. Nonetheless, complete the installation, decide if you’d like to remove the installer (in the next step), then return to this script."
+
+               while true
+                  do
+                     echo "Would you like me to remove $INSTALLER?"
+                     read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}" -n 1 -r REMOVE_RESPONSE
+
+                     case $REMOVE_RESPONSE in
+                        [yY]* )
+                           echo "Removing $INSTALLER and continuing."
+                           rm -fr "$INSTALLER"
+
+                           break;;
+
+                        [nN]* )
+                           echo "Keeping $INSTALLER and continuing"
+
+                           break;;
+
+                        * )
+                           echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose whether you’d like to remove $INSTALLER. [y]es, [n]o, or [q]uit. ${RESET} ";;
+                     esac
+               done
+
+               break;;
+
+            [nN]* )
+               break;;
+
+            * )
+               echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Install the $1? [y]es, [n]o, or [q]uit. ${RESET} ";;
+         esac
+   done
+}
