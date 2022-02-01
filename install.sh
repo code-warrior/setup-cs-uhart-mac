@@ -209,6 +209,9 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
 # Lynx is the text-only browser
 brew install lynx
 
+# Splint is the C linter
+brew install splint
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
