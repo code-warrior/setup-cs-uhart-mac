@@ -22,6 +22,9 @@ else
    exit 1
 fi
 
+print_msg 'log' 'This script will install, update, and configure files and applications '
+print_msg 'log' 'related to software used by the Dept of Computing Sciences at The '
+print_msg 'log' 'University of Hartford.'
 
 sudo -p "Enter your password, which, for security purposes, won’t be repeated in The Terminal as you type it: " echo "${BG_GREEN}${BLACK} > Thank you! ${RESET}"
 
