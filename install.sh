@@ -215,6 +215,9 @@ brew install splint
 # Shellcheck is the bash linter
 brew install shellcheck
 
+# Checkstyle is the Java linter
+brew install checkstyle
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
