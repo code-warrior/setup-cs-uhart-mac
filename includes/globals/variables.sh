@@ -19,6 +19,10 @@ MAJOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 MINOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 2)"
 PATCH_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 
+MINIMUM_MAJOR_NUMBER_REQUIRED="10"
+MINIMUM_MINOR_NUMBER_REQUIRED="15"
+MINIMUM_PATCH_NUMBER_REQUIRED="0"
+
 # Retrieve the hostname info, including domain.
 HOST_NAME="$(hostname)"
 
@@ -36,6 +40,9 @@ FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
 # name was retrieved above.
 USER_SHELL="$(finger "$USER_NAME" | awk '/Shell:/ {print $4}')"
 
+export MINIMUM_MAJOR_NUMBER_REQUIRED
+export MINIMUM_MINOR_NUMBER_REQUIRED
+export MINIMUM_PATCH_NUMBER_REQUIRED
 export MAJOR_NUMBER_OF_CURRENT_OS
 export MINOR_NUMBER_OF_CURRENT_OS
 export PATCH_NUMBER_OF_CURRENT_OS

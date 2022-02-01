@@ -26,6 +26,26 @@ print_msg "log" "This script will install, update, and configure files and appli
 print_msg "log" "related to software used by the Dept of Computing Sciences at The "
 print_msg "log" "University of Hartford."
 
+#####################################################################################
+# Check if macOS version is at least Catalina (10.15.0)
+#####################################################################################
+if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; then
+   print_msg "error" "You are running $OS_VERSION of macOS, which is from before \
+2019. The minimum"
+   print_msg "error" "version required to run the software installed by this script \
+is $MINIMUM_MAJOR_NUMBER_REQUIRED.\
+$MINIMUM_MINOR_NUMBER_REQUIRED.\
+$MINIMUM_PATCH_NUMBER_REQUIRED."
+   print_msg "error" "(Catalina). Please update your OS and try again. Exiting..."
+
+   exit 1
+else
+   print_msg "warn" "This installation script was updated in February 2022 to work in macOS"
+   print_msg "warn" "Monterey (12.1). It may work in versions as early as macOS Catalina "
+   print_msg "warn" "($MINIMUM_MAJOR_NUMBER_REQUIRED.$MINIMUM_MINOR_NUMBER_REQUIRED.$MINIMUM_PATCH_NUMBER_REQUIRED.). However, versions older than that are likely not compatible"
+   print_msg "warn" "with this script and are inadvisable to use."
+fi
+
 sudo -p "Enter your password, which, for security purposes, won’t be repeated in The Terminal as you type it: " echo "${BG_GREEN}${BLACK} > Thank you! ${RESET}"
 
 print_msg "log" " "
@@ -61,28 +81,6 @@ print_msg "log" " "
 sudo softwareupdate -ia
 print_msg "log" " "
 print_msg "log" "Software update has been run."
-
-#####################################################################################
-# Check OS version.
-#####################################################################################
-case ${OS_VERSION} in
-   *10.15* | *10.14* | *10.13* | *10.12* )
-      cmdline_version="CLTools_Executables"
-      ;;
-
-   *10.11*)
-      cmdline_version="CLTools_Executables" # Minimum version: El Capitán
-
-      print_msg "warning" "El Capitán (macOS 10.11.$PATCH_OS_NUMBER) is no longer supported by Apple, and is "
-      print_msg "warning" "the earliest macOS version this script supports. Consider upgrading before continuing."
-      ;;
-
-   *)
-      print_msg "error" "Sorry! You will have to upgrade your OS to $MINIMUM_MAC_OS or above to continue."
-
-      exit 1
-      ;;
-esac
 
 #####################################################################################
 # Check for command line tools.
