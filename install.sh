@@ -206,6 +206,9 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
 #####################################################################################
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Lynx is the text-only browser
+brew install lynx
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
