@@ -234,6 +234,21 @@ install 'Java SE Development Kit' 'jdk-17_macos-x64_bin.dmg' 'https://download.o
   -H 'Referer: https://www.oracle.com/java/technologies/downloads/' \
   -H 'Accept-Language: en-US,en;q=0.9'
 
+install 'Sublime Text (3.2.2)' 'Sublime Text Build 3211.dmg' 'https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Referer: https://www.sublimetext.com/' \
+  -H 'Accept-Language: en-US,en;q=0.9'
+
 install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
 
 #####################################################################################
