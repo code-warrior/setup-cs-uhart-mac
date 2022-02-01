@@ -201,6 +201,8 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
   -H 'referer: https://vivaldi.com/' \
   -H 'accept-language: en-US,en;q=0.9'
 
+install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
+
 #####################################################################################
 # Install Homebrew
 #####################################################################################
