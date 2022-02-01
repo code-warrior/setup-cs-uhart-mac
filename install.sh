@@ -212,6 +212,9 @@ brew install lynx
 # Splint is the C linter
 brew install splint
 
+# Shellcheck is the bash linter
+brew install shellcheck
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
