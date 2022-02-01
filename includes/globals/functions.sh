@@ -66,3 +66,50 @@ function print_msg () {
          ;;
    esac
 }
+
+#
+# Three assumptions are being made in the performance of this function.
+# First, that the downloaded font file is in ZIP format; second, that
+# the font files are in a directory only one level down; and, lastly,
+# that the fonts are being fetched from the fonts.google foundry.
+#
+# Parameter explanation:
+#    The native font file name
+#       (eg, IBMPlexMono-Regular.ttf)
+#    The font name
+#       (eg, IBM Plex Mono)
+#    The URL to the direct download of the font
+#       (eg, https://fonts.google.com/download?family=IBM%20Plex%20Mono)
+#    The font’s installer file name
+#       (eg, IBM_Plex_Mono.zip)
+#    The target folder into which the fonts will be uncompressed
+#       (eg, IBM_Plex_Mono)
+#
+# Example usage:
+#    install_typeface \
+#       "CourierPrime-Regular.ttf" \
+#       "Courier Prime" \
+#       "https://fonts.google.com/download?family=Courier%20Prime" \
+#       "Courier_Prime.zip" \
+#       "Courier_Prime"
+#
+function install_typeface () {
+   if [[ -e "$HOME/Library/Fonts/$1" ]]; then
+      print_msg "warn"  "$2 is already installed. Skipping..."
+   else
+      print_msg "log" "Downloading the $2 typeface..."
+      curl $3 -o "$4"
+
+      print_msg "log" "Unzipping the $2 typeface..."
+      unzip "$4" -d "$5"
+
+      print_msg "log" "Installing the $2 typeface into Font Book..."
+      mv "$5"/*.ttf "$HOME/Library/Fonts/"
+
+      print_msg "log" "Removing un-needed $5..."
+      rm -fr "$5"
+
+      print_msg "log" "Removing un-needed $4 file..."
+      rm -fr "$4"
+   fi
+}
