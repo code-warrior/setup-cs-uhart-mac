@@ -99,6 +99,9 @@ else
    xcode-select --install
 fi
 
+#####################################################################################
+# Set OS configurations
+#####################################################################################
 print_msg "log" "Setting OS configurations..."
 
 print_msg "log" "Enabling the following features when clicking the clock in the upper"
