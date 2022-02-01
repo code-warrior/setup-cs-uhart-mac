@@ -30,12 +30,8 @@ print_msg "log" "University of Hartford."
 # Check if macOS version is at least Catalina (10.15.0)
 #####################################################################################
 if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; then
-   print_msg "error" "You are running $OS_VERSION of macOS, which is from before \
-2019. The minimum"
-   print_msg "error" "version required to run the software installed by this script \
-is $MINIMUM_MAJOR_NUMBER_REQUIRED.\
-$MINIMUM_MINOR_NUMBER_REQUIRED.\
-$MINIMUM_PATCH_NUMBER_REQUIRED."
+   print_msg "error" "You are running $OS_VERSION of macOS, which is from before 2019. The minimum"
+   print_msg "error" "version required to run the software installed by this script is $MINIMUM_MAJOR_NUMBER_REQUIRED.$MINIMUM_MINOR_NUMBER_REQUIRED.$MINIMUM_PATCH_NUMBER_REQUIRED."
    print_msg "error" "(Catalina). Please update your OS and try again. Exiting..."
 
    exit 1
