@@ -101,8 +101,9 @@ fi
 
 print_msg "log" "Setting OS configurations..."
 
-print_msg "log" "Enabling the following features when clicking the clock in the upper "
-print_msg "log" "right hand corner of the login window: Host name, OS version number, and IP address."
+print_msg "log" "Enabling the following features when clicking the clock in the upper"
+print_msg "log" "right hand corner of the login window: Host name, OS version number, and"
+print_msg "log" "IP address."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 print_msg "log" " "
