@@ -218,6 +218,9 @@ brew install shellcheck
 # Checkstyle is the Java linter
 brew install checkstyle
 
+# Sass is the CSS preprocessor
+brew install sass/sass/sass
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
