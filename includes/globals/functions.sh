@@ -98,7 +98,7 @@ function install_typeface () {
       print_msg "warn"  "$2 is already installed. Skipping..."
    else
       print_msg "log" "Downloading the $2 typeface..."
-      curl $3 -o "$4"
+      curl "$3" -o "$4"
 
       print_msg "log" "Unzipping the $2 typeface..."
       unzip "$4" -d "$5"
