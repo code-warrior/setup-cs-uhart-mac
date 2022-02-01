@@ -201,6 +201,39 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
   -H 'referer: https://vivaldi.com/' \
   -H 'accept-language: en-US,en;q=0.9'
 
+#####################################################################################
+# Install Java
+#####################################################################################
+install 'Java 8 Update 321' 'jre-8u321-macosx-x64.dmg' 'https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u321-macosx-x64.dmg&AuthParam=1643562635_38ceb232f182e25675b5877fd03599fe&ext=.dmg' \
+  -H 'Connection: keep-alive' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: https://java.com/' \
+  -H 'Accept-Language: en-US,en;q=0.9'
+
+install 'Java SE Development Kit' 'jdk-17_macos-x64_bin.dmg' 'https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.dmg' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Referer: https://www.oracle.com/java/technologies/downloads/' \
+  -H 'Accept-Language: en-US,en;q=0.9'
+
 install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
 
 #####################################################################################
