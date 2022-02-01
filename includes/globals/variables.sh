@@ -19,6 +19,7 @@ MAJOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 MINOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 2)"
 PATCH_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 
+# Semver OS number parsing for minimum os, Catalina
 MINIMUM_MAJOR_NUMBER_REQUIRED="10"
 MINIMUM_MINOR_NUMBER_REQUIRED="15"
 MINIMUM_PATCH_NUMBER_REQUIRED="0"
