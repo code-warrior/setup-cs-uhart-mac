@@ -104,6 +104,22 @@ else
    xcode-select --install
 fi
 
+print_msg "log" "Setting OS configurations..."
+
+#####################################################################################
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login
+# window
+#####################################################################################
+print_msg "log" "Setting OS option that, when clicking the clock in the login window, "
+print_msg "log" "reveals IP address, hostname, and OS version."
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+#####################################################################################
+# Only use UTF-8 in The Terminal
+#####################################################################################
+print_msg "log" "Setting OS option that accepts UTF-8 as input in The Terminal."
+sudo defaults write com.apple.terminal StringEncodings -array 4
+
 #####################################################################################
 # Install typefaces
 #####################################################################################
