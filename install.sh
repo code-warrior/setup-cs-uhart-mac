@@ -291,6 +291,9 @@ install 'Java SE Development Kit' 'jdk-17_macos-x64_bin.dmg' 'https://download.o
   -H 'Referer: https://www.oracle.com/java/technologies/downloads/' \
   -H 'Accept-Language: en-US,en;q=0.9'
 
+#####################################################################################
+# Installing IDEs/editors
+#####################################################################################
 print_msg "log" "Installing IDEs and editors..."
 
 install 'Visual Studio Code' 'VSCode-darwin-universal.zip' 'https://az764295.vo.msecnd.net/stable/899d46d82c4c95423fb7e10e68eba52050e30ba3/VSCode-darwin-universal.zip' \
