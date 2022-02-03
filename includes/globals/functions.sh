@@ -128,38 +128,38 @@ function install () {
 
    while true
       do
-         echo " Would you like to install $1?"
+         print_msg "log" " Would you like to install $1?"
          read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}" -n 1 -r RESPONSE
 
          case $RESPONSE in
             [yY]* )
-               echo "Downloading $1..."
+               print_msg "log" "Downloading $1..."
                curl "$3" --compressed -o "$2"
 
-               echo "Opening $1... "
+               print_msg "log" "Opening $1... "
                open "$2"
 
-               echo "You may or may not need to move $2 into the Applications folder. Nonetheless, complete the installation, decide if you’d like to remove the installer (in the next step), then return to this script."
+               print_msg "log" "You may or may not need to move $2 into the Applications folder. Nonetheless, complete the installation, decide if you’d like to remove the installer (in the next step), then return to this script."
 
                while true
                   do
-                     echo "Would you like me to remove $INSTALLER?"
+                     print_msg "log" "Would you like me to remove $INSTALLER?"
                      read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}" -n 1 -r REMOVE_RESPONSE
 
                      case $REMOVE_RESPONSE in
                         [yY]* )
-                           echo "Removing $INSTALLER and continuing."
+                           print_msg "log" "Removing $INSTALLER and continuing."
                            rm -fr "$INSTALLER"
 
                            break;;
 
                         [nN]* )
-                           echo "Keeping $INSTALLER and continuing"
+                           print_msg "log" "Keeping $INSTALLER and continuing"
 
                            break;;
 
                         * )
-                           echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose whether you’d like to remove $INSTALLER. [y]es, [n]o, or [q]uit. ${RESET} ";;
+                           print_msg "log" "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose whether you’d like to remove $INSTALLER. [y]es, [n]o, or [q]uit. ${RESET} ";;
                      esac
                done
 
@@ -169,7 +169,7 @@ function install () {
                break;;
 
             * )
-               echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Install the $1? [y]es, [n]o, or [q]uit. ${RESET} ";;
+               print_msg "warn" "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Install the $1? [y]es, [n]o, or [q]uit. ${RESET} ";;
          esac
    done
 }
