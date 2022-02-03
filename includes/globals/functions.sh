@@ -139,8 +139,7 @@ function install () {
                print_msg "log" "Opening $1... "
                open "$2"
 
-               print_msg "log" "You may or may not need to move $2 into the Applications folder."
-               print_msg "log" "Nonetheless, complete the installation, decide if you’d like to remove"
+               print_msg "log" "Complete the installation, decide if you’d like to remove"
                print_msg "log" "the installer (in the next step), then return to this script."
 
                while true
