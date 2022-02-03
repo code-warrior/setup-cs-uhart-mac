@@ -183,7 +183,7 @@ function install_configuration_file() {
          print_msg "log" "Nothing to install. Continuing..."
       else
          print_msg "log" "$1 file exists."
-         pause_and_warn
+         pause
 
          print_msg "log" "Renaming to .backup$1..."
          mv -v "$HOME/$1" "$HOME/.backup$1"
@@ -199,7 +199,7 @@ function install_configuration_file() {
 
             if [[ -e "$1" ]]; then
                print_msg "warn" "$1 was not successfully installed. Please investigate, then continue."
-               pause_and_warn
+               pause
             else
                print_msg "log" "$1 was installed successfully."
             fi
@@ -217,7 +217,7 @@ function install_configuration_file() {
 
          if [[ -e "$1" ]]; then
             warn "$1 was not successfully installed. Please investigate, then continue."
-            pause_and_warn
+            pause
          else
             print_msg "log" "$1 was installed successfully."
          fi
