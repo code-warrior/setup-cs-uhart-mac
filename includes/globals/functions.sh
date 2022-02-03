@@ -175,3 +175,53 @@ function install () {
          esac
    done
 }
+
+function install_configuration_file() {
+   if [[ -e "$HOME/$1" ]]; then
+      if [[ -e "$HOME/.backup$1" ]]; then
+         print_msg "log" "$1 and .backup$1 exist."
+         print_msg "log" "Nothing to install. Continuing..."
+      else
+         print_msg "log" "$1 file exists."
+         pause_and_warn
+
+         print_msg "log" "Renaming to .backup$1..."
+         mv -v "$HOME/$1" "$HOME/.backup$1"
+
+         print_msg "log" "Downloading $1..."
+         curl -O "$2"
+
+         if [[ -e "$1" ]]; then
+            print_msg "log" "$1 downloaded successfully."
+
+            print_msg "log" "Installing $1..."
+            mv -v "$1" "$HOME/"
+
+            if [[ -e "$1" ]]; then
+               print_msg "warn" "$1 was not successfully installed. Please investigate, then continue."
+               pause_and_warn
+            else
+               print_msg "log" "$1 was installed successfully."
+            fi
+         fi
+      fi
+   else
+      print_msg "log" "Downloading $1..."
+      curl -O "$2"
+
+      if [[ -e "$1" ]]; then
+         print_msg "log" "$1 downloaded successfully."
+
+         print_msg "log" "Installing $1..."
+         mv -v "$1" "$HOME/"
+
+         if [[ -e "$1" ]]; then
+            warn "$1 was not successfully installed. Please investigate, then continue."
+            pause_and_warn
+         else
+            print_msg "log" "$1 was installed successfully."
+         fi
+      fi
+   fi
+}
+
