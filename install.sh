@@ -123,6 +123,8 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 #####################################################################################
 # Install typefaces
 #####################################################################################
+print_msg "log" "Installing typefaces..."
+
 install_typeface "IBMPlexMono-Regular.ttf" \
    "IBM Plex Mono" \
    "https://fonts.google.com/download?family=IBM%20Plex%20Mono" \
