@@ -216,7 +216,7 @@ function install_configuration_file() {
          mv -v "$1" "$HOME/"
 
          if [[ -e "$1" ]]; then
-            warn "$1 was not successfully installed. Please investigate, then continue."
+            print_msg "warn" "$1 was not successfully installed. Please investigate, then continue."
             pause
          else
             print_msg "log" "$1 was installed successfully."
