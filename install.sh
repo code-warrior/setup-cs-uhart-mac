@@ -91,6 +91,11 @@ print_msg "log" "Checking for XCode Command Line Tools..."
 # return a null string, then the tools have been installed.
 #####################################################################################
 if [[ -n "$(pkgutil --pkgs=com.apple.pkg.${cmdline_version})" ]]; then
+#####################################################################################
+# Install (-i) recommended (-r) software updates
+#####################################################################################
+print_msg "log"  "Running software update on Mac OS... " true
+sudo softwareupdate -i -r
    print_msg "log" "Command Line Tools are installed!"
 else
    print_msg "error" "Command Line Tools are not installed!"
