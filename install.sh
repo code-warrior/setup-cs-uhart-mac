@@ -121,6 +121,18 @@ print_msg "log" "Setting OS option that accepts UTF-8 as input in The Terminal."
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
 #####################################################################################
+# Install environment, including Git, Bash, and Editorconfig
+#####################################################################################
+base_URL="https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master"
+
+install_configuration_file "$GIT_PROMPT" "$base_URL"/terminal/git-env-for-mac-and-windows/"$GIT_PROMPT"
+install_configuration_file "$GIT_COMPLETION" "$base_URL"/terminal/git-env-for-mac-and-windows/"$GIT_COMPLETION"
+install_configuration_file "$BASH_ALIAS" "$base_URL"/terminal/mac/"$BASH_ALIAS"
+install_configuration_file "$BASH_RUN_COMMANDS" "$base_URL"/terminal/mac/"$BASH_RUN_COMMANDS"
+install_configuration_file "$BASH_PFILE" "$base_URL"/terminal/mac/"$BASH_PFILE"
+install_configuration_file "$EDITOR_CONFIG_SETTINGS" "$base_URL"/"$EDITOR_CONFIG_SETTINGS"
+
+#####################################################################################
 # Install typefaces
 #####################################################################################
 print_msg "log" "Installing typefaces..."
