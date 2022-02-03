@@ -308,6 +308,20 @@ install 'Visual Studio Code' 'VSCode-darwin-universal.zip' 'https://az764295.vo.
   -H 'referer: https://code.visualstudio.com/' \
   -H 'accept-language: en-US,en;q=0.9'
 
+install 'Eclipse Installer' 'eclipse-inst-jre-mac64.dmg' 'https://ftp.osuosl.org/pub/eclipse/oomph/epp/2021-12/R/eclipse-inst-jre-mac64.dmg' \
+  -H 'Connection: keep-alive' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Referer: https://www.eclipse.org/' \
+  -H 'Accept-Language: en-US,en;q=0.9'
+
 install 'Sublime Text (3.2.2)' 'Sublime Text Build 3211.dmg' 'https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg' \
   -H 'Connection: keep-alive' \
   -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
