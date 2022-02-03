@@ -41,6 +41,12 @@ FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
 # name was retrieved above.
 USER_SHELL="$(finger "$USER_NAME" | awk '/Shell:/ {print $4}')"
 
+export GIT_PROMPT=".git-prompt.sh"
+export GIT_COMPLETION=".git-completion.sh"
+export BASH_ALIAS=".bash_aliases"
+export BASH_PFILE=".bash_profile"
+export BASH_RUN_COMMANDS=".bashrc"
+export EDITOR_CONFIG_SETTINGS=".editorconfig"
 export MINIMUM_MAJOR_NUMBER_REQUIRED
 export MINIMUM_MINOR_NUMBER_REQUIRED
 export MINIMUM_PATCH_NUMBER_REQUIRED
