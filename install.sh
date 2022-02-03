@@ -87,6 +87,8 @@ print_msg "log" "Software update has been run."
 #####################################################################################
 print_msg "log" "Checking for XCode Command Line Tools..."
 
+cmdline_version="CLTools_Executables"
+
 #####################################################################################
 # If the command line tools have been installed, they would appear as
 # `com.apple.pkg.CLTools_Executables` in the result of `pkgutil --pkgs`. Similarly,
@@ -94,12 +96,11 @@ print_msg "log" "Checking for XCode Command Line Tools..."
 # `com.apple.pkg.CLTools_Executables`. Thus, if running the `pkgutil` command doesn’t
 # return a null string, then the tools have been installed.
 #####################################################################################
-if [[ -n "$(pkgutil --pkgs=com.apple.pkg.${cmdline_version})" ]]; then
-#####################################################################################
-# Install (-i) recommended (-r) software updates
-#####################################################################################
-print_msg "log"  "Running software update on Mac OS... " true
-sudo softwareupdate -i -r
+if [[ -n $(pkgutil --pkgs=com.apple.pkg."${cmdline_version}") ]]; then
+   print_msg "log"  "Running software update on Mac OS... " true
+
+   # Install (-i) recommended (-r) software updates
+   sudo softwareupdate -i -r
    print_msg "log" "Command Line Tools are installed!"
 else
    print_msg "error" "Command Line Tools are not installed!"
