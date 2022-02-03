@@ -180,6 +180,8 @@ install 'Logitech Options' 'options_installer.zip' 'https://download01.logi.com/
 #####################################################################################
 # Install browsers
 #####################################################################################
+print_msg "log" "Installing browsers..."
+
 install 'Firefox' 'Firefox 96.0.3.dmg' 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/96.0.3/mac/en-US/Firefox%2096.0.3.dmg' \
   -H 'authority: download-installer.cdn.mozilla.net' \
   -H 'upgrade-insecure-requests: 1' \
@@ -257,6 +259,8 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
 #####################################################################################
 # Install Java
 #####################################################################################
+print_msg "log" "Installing Java..."
+
 install 'Java 8 Update 321' 'jre-8u321-macosx-x64.dmg' 'https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u321-macosx-x64.dmg&AuthParam=1643562635_38ceb232f182e25675b5877fd03599fe&ext=.dmg' \
   -H 'Connection: keep-alive' \
   -H 'Upgrade-Insecure-Requests: 1' \
@@ -287,6 +291,7 @@ install 'Java SE Development Kit' 'jdk-17_macos-x64_bin.dmg' 'https://download.o
   -H 'Referer: https://www.oracle.com/java/technologies/downloads/' \
   -H 'Accept-Language: en-US,en;q=0.9'
 
+print_msg "log" "Installing IDEs and editors..."
 install 'Sublime Text (3.2.2)' 'Sublime Text Build 3211.dmg' 'https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg' \
   -H 'Connection: keep-alive' \
   -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
