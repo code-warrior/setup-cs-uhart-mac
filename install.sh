@@ -146,6 +146,24 @@ install_typeface \
    "Courier_Prime"
 
 #####################################################################################
+# Install Logitech Options for MX Master 3 mouse and MX Keys keyboard
+#####################################################################################
+install 'Logitech Options' 'options_installer.zip' 'https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip' \
+  -H 'authority: download01.logi.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'referer: https://www.logitech.com/' \
+  -H 'accept-language: en-US,en;q=0.9'
+
+#####################################################################################
 # Install browsers
 #####################################################################################
 install 'Firefox' 'Firefox 96.0.3.dmg' 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/96.0.3/mac/en-US/Firefox%2096.0.3.dmg' \
