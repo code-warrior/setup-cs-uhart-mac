@@ -188,7 +188,7 @@ function install_configuration_file() {
          mv -v "$HOME/$1" "$HOME/.backup$1"
 
          print_msg "log" "Downloading $1..."
-         curl -O "$2"
+         curl -O "$2$1"
 
          if [[ -e "$1" ]]; then
             print_msg "log" "$1 downloaded successfully."
