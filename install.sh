@@ -316,21 +316,6 @@ install 'Visual Studio Code' 'VSCode-darwin-universal.zip' 'https://az764295.vo.
   -H 'referer: https://code.visualstudio.com/' \
   -H 'accept-language: en-US,en;q=0.9'
 
-install 'Node' 'node-v16.13.2.pkg' 'https://nodejs.org/dist/v16.13.2/node-v16.13.2.pkg' \
-  -H 'authority: nodejs.org' \
-  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'upgrade-insecure-requests: 1' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36' \
-  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
-  -H 'sec-fetch-site: same-origin' \
-  -H 'sec-fetch-mode: navigate' \
-  -H 'sec-fetch-user: ?1' \
-  -H 'sec-fetch-dest: document' \
-  -H 'referer: https://nodejs.org/en/' \
-  -H 'accept-language: en-US,en;q=0.9'
-
 install 'Eclipse Installer' 'eclipse-inst-jre-mac64.dmg' 'https://ftp.osuosl.org/pub/eclipse/oomph/epp/2021-12/R/eclipse-inst-jre-mac64.dmg' \
   -H 'Connection: keep-alive' \
   -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
@@ -374,6 +359,25 @@ install 'Atom' 'atom-mac.zip' 'https://atom-installer.github.com/v1.58.0/atom-ma
   -H 'sec-ch-ua-platform: "macOS"' \
   -H 'referer: https://atom.io/' \
   -H 'accept-language: en-US,en;q=0.9'
+
+print_msg "log" "Installing Node..."
+
+install 'Node' 'node-v16.13.2.pkg' 'https://nodejs.org/dist/v16.13.2/node-v16.13.2.pkg' \
+  -H 'authority: nodejs.org' \
+  -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'referer: https://nodejs.org/en/' \
+  -H 'accept-language: en-US,en;q=0.9'
+
+sudo npm install --global gulp-cli
 
 install 'Arduino IDE' 'arduino-1.8.19-macosx.zip' 'https://downloads.arduino.cc/arduino-1.8.19-macosx.zip' \
   -H 'authority: downloads.arduino.cc' \
