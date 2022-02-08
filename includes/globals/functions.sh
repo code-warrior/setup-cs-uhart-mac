@@ -175,6 +175,16 @@ function install () {
    done
 }
 
+#
+# Installs environment files for Bash, including Git-related Bash files and
+# editorconfig. The files are fetched from https://github.com/code-warrior/web-dev-env-config-files.
+# Two parameters are requires:
+#    Configuration file (eg, .git-prompt.sh)
+#    URL to the configuration file’s parent folder
+#
+# Example usage:
+#    install_configuration_file '.git-completion.sh' 'https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/'
+#
 function install_configuration_file() {
    if [[ -e "$HOME/$1" ]]; then
       if [[ -e "$HOME/.backup$1" ]]; then
