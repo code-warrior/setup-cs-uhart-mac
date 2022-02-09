@@ -264,15 +264,3 @@ function install_plugin_for () {
       fi
    fi
 }
-
-   echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>>  $1 ${RESET}"
-   echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>> ${RESET}"
-
-   read -r -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Continue? [Yy] ${RESET} " -n 1 -r
-
-   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-      print_msg "error" "Exiting..." true
-
-      exit 1;
-   fi
-}
