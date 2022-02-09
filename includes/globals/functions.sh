@@ -11,6 +11,19 @@ else
    exit 1
 fi
 
+function pause () {
+   echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>> ${RESET}"
+   echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>> ${RESET}"
+
+   read -r -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Continue? [Yy] ${RESET} " -n 1 -r
+
+   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      echo "Exiting..." true
+
+      exit 1;
+   fi
+}
+
 #
 # Required by the “print_msg” function below.
 #
@@ -234,10 +247,23 @@ function install_configuration_file() {
    fi
 }
 
-function pause () {
-   if [[ -n $2 ]]; then
-      echo "";
+function install_plugin_for () {
+   if $1 eq "atom"; then
+      if apm list | grep "$1@"; then
+          print_msg "log" "APM package $1 exists. Skipping..."
+      else
+          apm install "$1"
+      fi
+   else
+      if $1 eq "vscode"; then
+         if code --list-extensions "$1" | grep "$1" ; then
+             print_msg "log" "VSCode’s $1 exists. Skipping..."
+         else
+             code --install-extension "$1"
+         fi
+      fi
    fi
+}
 
    echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>>  $1 ${RESET}"
    echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>> ${RESET}"
