@@ -378,6 +378,7 @@ install 'Node' 'node-v16.13.2.pkg' 'https://nodejs.org/dist/v16.13.2/node-v16.13
   -H 'accept-language: en-US,en;q=0.9'
 
 sudo npm install --global gulp-cli
+sudo npm install eslint
 
 install 'Arduino IDE' 'arduino-1.8.19-macosx.zip' 'https://downloads.arduino.cc/arduino-1.8.19-macosx.zip' \
   -H 'authority: downloads.arduino.cc' \
