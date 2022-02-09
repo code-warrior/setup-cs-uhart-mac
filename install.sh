@@ -404,6 +404,11 @@ install 'Arduino IDE' 'arduino-1.8.19-macosx.zip' 'https://downloads.arduino.cc/
 
 install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
 
+# Install Dockspacer, which creates spacers in The Dock for neatness
+curl -OL https://github.com/code-warrior/dockspacer/raw/master/dockspacer
+chmod 755 dockspacer
+sudo cp dockspacer /usr/local/bin
+
 #####################################################################################
 # Install Homebrew
 #####################################################################################
