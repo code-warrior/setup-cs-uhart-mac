@@ -316,6 +316,13 @@ install 'Visual Studio Code' 'VSCode-darwin-universal.zip' 'https://az764295.vo.
   -H 'referer: https://code.visualstudio.com/' \
   -H 'accept-language: en-US,en;q=0.9'
 
+print_msg "warn" "Add VS Code to your path for command line usage before continuing:"
+print_msg "log" "Launch VS Code"
+print_msg "log" "Open the command palette (CMD + SHIFT + P), then type 'shell command'"
+print_msg "log" "Choose 'Shell Command: Install \'code\' command in PATH'"
+print_msg "log" "Close VS Code"
+pause
+
 install 'Eclipse Installer' 'eclipse-inst-jre-mac64.dmg' 'https://ftp.osuosl.org/pub/eclipse/oomph/epp/2021-12/R/eclipse-inst-jre-mac64.dmg' \
   -H 'Connection: keep-alive' \
   -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
