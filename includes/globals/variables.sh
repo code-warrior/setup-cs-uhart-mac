@@ -41,6 +41,8 @@ FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
 # name was retrieved above.
 USER_SHELL="$(finger "$USER_NAME" | awk '/Shell:/ {print $4}')"
 
+VSCODE_EXTENSIONS=("editorconfig.editorconfig" "mkaufman.htmlhint" "umoxfo.vscode-w3cvalidation" "stylelint.vscode-stylelint" "syler.sass-indented" "dbaeumer.vscode-eslint")
+export VSCODE_EXTENSIONS
 export GIT_PROMPT=".git-prompt.sh"
 export GIT_COMPLETION=".git-completion.sh"
 export BASH_ALIAS=".bash_aliases"

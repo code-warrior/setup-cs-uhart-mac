@@ -424,6 +424,21 @@ brew install checkstyle
 # Sass is the CSS preprocessor
 brew install sass/sass/sass
 
+# If VSCode is configured at the command line, then install the extensions
+if code --help > /dev/null 2>&1; then
+   for i in "${!VSCODE_EXTENSIONS[@]}"; do
+      install_plugin_for "vscode" "${VSCODE_EXTENSIONS[$i]}"
+   done
+else
+   print_msg "error" "VSCode isn’t configured to work from the command line. This may be the"
+   print_msg "error" "result of not having configured it, not having installed VS Code, or"
+   print_msg "error" "some other issue. If VS Code is installed, then visit "
+   print_msg "error" "https://code.visualstudio.com/docs/setup/mac to learn how to configure"
+   print_msg "error" "VS Code to work from the command line. Then, look at the"
+   print_msg "error" "VSCODE_EXTENSIONS array in includes/globals/variables.sh for a list of"
+   print_msg "error" "the extensions that should installed manually."
+   pause
+fi
 #####################################################################################
 # Set OS configurations
 #####################################################################################
