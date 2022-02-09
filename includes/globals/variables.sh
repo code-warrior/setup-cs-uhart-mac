@@ -42,7 +42,10 @@ FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
 USER_SHELL="$(finger "$USER_NAME" | awk '/Shell:/ {print $4}')"
 
 VSCODE_EXTENSIONS=("editorconfig.editorconfig" "mkaufman.htmlhint" "umoxfo.vscode-w3cvalidation" "stylelint.vscode-stylelint" "syler.sass-indented" "dbaeumer.vscode-eslint")
+ATOM_PACKAGES=("busy-signal" "intentions" "linter-ui-default" "linter" "editorconfig" "w3c-validation" "linter-stylelint" "emmet")
+
 export VSCODE_EXTENSIONS
+export ATOM_PACKAGES
 export GIT_PROMPT=".git-prompt.sh"
 export GIT_COMPLETION=".git-completion.sh"
 export BASH_ALIAS=".bash_aliases"

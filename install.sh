@@ -439,6 +439,23 @@ else
    print_msg "error" "the extensions that should installed manually."
    pause
 fi
+
+# If Atom’s package manager (APM) was installed, then install the packages
+if [[ -n "$(apm install)" ]]; then
+   for i in "${!ATOM_PACKAGES[@]}"; do
+      install_plugin_for "atom" "${ATOM_PACKAGES[$i]}"
+   done
+else
+   print_msg "error" "Atom’s package manager (APM) is not installed."
+   print_msg "error" "1. Launch Atom."
+   print_msg "error" "2. Click Atom in the menu bar on the left, next to the Apple icon."
+   print_msg "error" "3. Choose Install Shell Commands."
+   print_msg "error" "4. Launch The Terminal."
+   print_msg "error" "5. See the array ATOM_PACKAGES in includes/globals/variables.sh for a"
+   print_msg "error" "   list of packages to install manually, using the command 'apm install'."
+   pause
+fi
+
 #####################################################################################
 # Set OS configurations
 #####################################################################################
