@@ -429,7 +429,7 @@ if [[ -e "/usr/local/bin/dockspacer" ]]; then
 else
    curl -OL https://github.com/code-warrior/dockspacer/raw/master/dockspacer
    chmod 755 dockspacer
-   sudo mv dockspacer /usr/local/bin
+   sudo mv dockspacer /usr/local/bin/
 
    if [[ -e "/usr/local/bin/dockspacer" ]]; then
       print_msg "log" "Dockspacer installed."
