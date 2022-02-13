@@ -575,6 +575,7 @@ print_msg "log" "* Expose the entire \"print\" panel (instead of collapsing it) 
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 print_msg "log" "* Installation complete. Please restart your machine."
+
 for app in Finder Dock SystemUIServer;
    do killall "$app" >/dev/null 2>&1;
 done
