@@ -538,43 +538,43 @@ fi
 #####################################################################################
 print_msg "log" "Setting OS configurations..."
 
-print_msg "log" "Enabling the following features when clicking the clock in the upper"
+print_msg "log" "* Enabling the following features when clicking the clock in the upper"
 print_msg "log" "right hand corner of the login window: Host name, OS version number, and"
 print_msg "log" "IP address."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-print_msg "log" "Show all filename extensions in Finder."
+print_msg "log" "* Show all filename extensions in Finder."
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-print_msg "log" "Show Path Bar (at the bottom of windows) in Finder."
+print_msg "log" "* Show Path Bar (at the bottom of windows) in Finder."
 defaults write com.apple.finder ShowPathbar -bool true
 
-print_msg "log" "Show Status Bar (below Path Bar) in Finder."
+print_msg "log" "* Show Status Bar (below Path Bar) in Finder."
 defaults write com.apple.finder ShowStatusBar -bool true
 
-print_msg "log" "Hide/show the Dock when the mouse hovers over the screen edge of the Dock."
+print_msg "log" "* Hide/show the Dock when the mouse hovers over the screen edge of the Dock."
 defaults write com.apple.dock autohide -bool true
 
-print_msg "log" "Use UTF-8 as input to The Terminal."
+print_msg "log" "* Use UTF-8 as input to The Terminal."
 defaults write com.apple.terminal StringEncodings -array 4
 
-print_msg "log" "Display full POSIX path as Finder window title."
+print_msg "log" "* Display full POSIX path as Finder window title."
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-print_msg "log" "Bring up a dialog box when the power button is held for 2 seconds."
+print_msg "log" "* Bring up a dialog box when the power button is held for 2 seconds."
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 
-print_msg "log" "Request user’s password to wake from sleep or return from screen saver."
+print_msg "log" "* Request user’s password to wake from sleep or return from screen saver."
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-print_msg "log" "Expose the entire \"save\" panel (instead of collapsing it) when saving."
+print_msg "log" "* Expose the entire \"save\" panel (instead of collapsing it) when saving."
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-print_msg "log" "Expose the entire \"print\" panel (instead of collapsing it) when printing."
+print_msg "log" "* Expose the entire \"print\" panel (instead of collapsing it) when printing."
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
-print_msg "log" "Restart affected applications."
+print_msg "log" "* Installation complete. Please restart your machine."
 for app in Finder Dock SystemUIServer;
    do killall "$app" >/dev/null 2>&1;
 done
