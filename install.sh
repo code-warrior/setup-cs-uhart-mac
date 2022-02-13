@@ -422,6 +422,45 @@ else
 fi
 
 #####################################################################################
+# Install Spectacle
+#####################################################################################
+if [[ -d "/Applications/Spectacle.app/" ]]; then
+   print_msg "warn" "Spectacle is already installed on this machine."
+   pause
+else
+   install 'Spectacle' 'Spectacle+1.2.zip' 'https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip'
+
+   print_msg "log" "Launching Spectacle..."
+   open /Applications/Spectacle.app
+
+   print_msg "warn" "If you’re running Spectacle for the first time, do the following:"
+   print_msg "warn" "1. Click Open System Preferences."
+   print_msg "warn" "2. Unlock the lock in the lower left corner of Security & Privacy, "
+   print_msg "warn" "   if it’s locked."
+   print_msg "warn" "3. Check the box to the left of the Spectacle icon."
+   print_msg "warn" "4. Lock the dialog box."
+   print_msg "warn" "5. Click the glasses icon in the top right corner of the Desktop, known as "
+   print_msg "warn" "   Menu Extras, or menulets."
+   print_msg "warn" "6. Click Preferences..."
+   print_msg "warn" "7. Check the box next to Launch Spectacle at login."
+   pause
+
+   print_msg "log" "Downloading custom Spectacle shortcuts (Shortcuts.json)..."
+   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
+
+   print_msg "log" "Installing custom Spectacle shortcuts (Shortcuts.json)..."
+   mv -v Shortcuts.json ~/Library/Application\ Support/Spectacle/
+
+   if [[ -e Shortcuts.json ]]; then
+      print_msg "error" "The Spectacle shortcuts were not successfully installed. Please"
+      print_msg "error" "investigate, then continue."
+      pause
+   else
+      print_msg "log" "The Spectacle shortcuts were installed successfully."
+   fi
+fi
+
+#####################################################################################
 # Install Homebrew
 #####################################################################################
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
