@@ -52,6 +52,7 @@ export BASH_ALIAS=".bash_aliases"
 export BASH_PFILE=".bash_profile"
 export BASH_RUN_COMMANDS=".bashrc"
 export EDITOR_CONFIG_SETTINGS=".editorconfig"
+export ESLINT_SETTINGS=".eslintrc.json"
 export MINIMUM_MAJOR_NUMBER_REQUIRED
 export MINIMUM_MINOR_NUMBER_REQUIRED
 export MINIMUM_PATCH_NUMBER_REQUIRED

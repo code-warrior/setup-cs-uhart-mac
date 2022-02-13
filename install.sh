@@ -130,6 +130,7 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 #####################################################################################
 base_URL="https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master"
 
+install_configuration_file "$ESLINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/c6f1b02730b6a7d08c241f5bf1b62258/raw/2cdf414c31785847889697c67a7bd4bbad35393c/
 install_configuration_file "$GIT_PROMPT" "$base_URL"/terminal/git-env-for-mac-and-windows/
 install_configuration_file "$GIT_COMPLETION" "$base_URL"/terminal/git-env-for-mac-and-windows/
 install_configuration_file "$BASH_ALIAS" "$base_URL"/terminal/mac/
