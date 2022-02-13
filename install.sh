@@ -424,14 +424,14 @@ install 'GitHub' 'GitHubDesktop-x64.zip' 'https://desktop.githubusercontent.com/
 install 'Zoom' 'Zoom.pkg' 'https://cdn.zoom.us/prod/5.9.3.4239/Zoom.pkg'
 
 # Install Dockspacer, which creates spacers in The Dock so icons can be neatly grouped
-if [[ -d "/usr/local/bin/dockspacer" ]]; then
+if [[ -e "/usr/local/bin/dockspacer" ]]; then
    print_msg "warn" "Dockspacer already installed. Skipping..."
 else
    curl -OL https://github.com/code-warrior/dockspacer/raw/master/dockspacer
    chmod 755 dockspacer
    sudo mv dockspacer /usr/local/bin
 
-   if [[ -d "/usr/local/bin/dockspacer" ]]; then
+   if [[ -e "/usr/local/bin/dockspacer" ]]; then
       print_msg "log" "Dockspacer installed."
    else
       print_msg "error" "Dockspacer could not be installed, either because it"
