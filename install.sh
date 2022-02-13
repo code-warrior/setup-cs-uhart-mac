@@ -97,7 +97,7 @@ cmdline_version="CLTools_Executables"
 # return a null string, then the tools have been installed.
 #####################################################################################
 if [[ -n $(pkgutil --pkgs=com.apple.pkg."${cmdline_version}") ]]; then
-   print_msg "log"  "Running software update on Mac OS... " true
+   print_msg "log"  "Running software update on Mac OS... "
 
    # Install (-i) recommended (-r) software updates
    sudo softwareupdate -i -r
