@@ -415,9 +415,11 @@ else
    if [[ -d "/usr/local/bin/dockspacer" ]]; then
       print_msg "log" "Dockspacer installed."
    else
-      print_msg "error" "Dockspacer could not be installed, either because it could not be"
-      print_msg "error" "downloaded, you don’t have sufficient privilege, or some other issue."
-      print_msg "error" "Visit https://github.com/code-warrior/dockspacer to install manually."
+      print_msg "error" "Dockspacer could not be installed, either because it"
+      print_msg "error" "could not be downloaded, you don’t have sufficient"
+      print_msg "error" "privilege, or some other issue. Visit"
+      print_msg "error" "https://github.com/code-warrior/dockspacer to install"
+      print_msg "error" "manually."
    fi
 fi
 
