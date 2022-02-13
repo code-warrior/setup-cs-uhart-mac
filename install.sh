@@ -454,8 +454,8 @@ else
    mv -v Shortcuts.json ~/Library/Application\ Support/Spectacle/
 
    if [[ -e Shortcuts.json ]]; then
-      print_msg "error" "The Spectacle shortcuts were not successfully installed. Please"
-      print_msg "error" "investigate, then continue."
+      print_msg "error" "The Spectacle shortcuts were not successfully"
+      print_msg "error" "installed. Please investigate, then continue."
       pause
    else
       print_msg "log" "The Spectacle shortcuts were installed successfully."
