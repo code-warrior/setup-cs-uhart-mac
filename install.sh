@@ -132,6 +132,7 @@ base_URL="https://raw.githubusercontent.com/code-warrior/web-dev-env-config-file
 
 install_configuration_file "$ESLINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/c6f1b02730b6a7d08c241f5bf1b62258/raw/2cdf414c31785847889697c67a7bd4bbad35393c/
 install_configuration_file "$STYLELINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/
+install_configuration_file "$SASS_LINT_SETTINGS" "$base_URL"/sass/.sass-lint.yml
 install_configuration_file "$GIT_PROMPT" "$base_URL"/terminal/git-env-for-mac-and-windows/
 install_configuration_file "$GIT_COMPLETION" "$base_URL"/terminal/git-env-for-mac-and-windows/
 install_configuration_file "$BASH_ALIAS" "$base_URL"/terminal/mac/
