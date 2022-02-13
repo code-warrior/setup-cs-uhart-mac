@@ -269,7 +269,7 @@ install 'Vivaldi Browser (5.0.2497.48)' 'Vivaldi.5.0.2497.48.universal.dmg' 'htt
 #####################################################################################
 print_msg "log" "Installing Java..."
 
-install 'Java 8 Update 321' 'jre-8u321-macosx-x64.dmg' 'https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u321-macosx-x64.dmg&AuthParam=1643562635_38ceb232f182e25675b5877fd03599fe&ext=.dmg' \
+install 'Java 8 Update 321' 'jre-8u321-macosx-x64.dmg' 'https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u321-b07/df5ad55fdd604472a86a45a217032c7d/jre-8u321-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u321-macosx-x64.dmg&AuthParam=1644789344_f13bac63ab0024f7295015e17697ee39&ext=.dmg' \
   -H 'Connection: keep-alive' \
   -H 'Upgrade-Insecure-Requests: 1' \
   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
@@ -282,7 +282,8 @@ install 'Java 8 Update 321' 'jre-8u321-macosx-x64.dmg' 'https://sdlc-esd.oracle.
   -H 'sec-ch-ua-mobile: ?0' \
   -H 'sec-ch-ua-platform: "macOS"' \
   -H 'Referer: https://java.com/' \
-  -H 'Accept-Language: en-US,en;q=0.9'
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Cookie: s_fid=01712E4A9B6B54E4-112EA5CED7B4517C; s_cc=true; bm_mi=5349EFD61667DED1A49DCC382B01AF49~eKR0jT6sicAyQpe7R2GedF5MnLszY0bJq2agvZ+eeRlwcDrAx/2cjMbH5b8v2kxv4498aumx6563leLz1fZ/WNpZr+P5kD2xOwONnUu67fgeWenIQ2x8smVN6gh88KE+grU4is5/gKIkxsx96wn9x8CBIv6QAzK9fqVePoyxFCqhPGEvH353rIB41V02svGOypv6Z6qxuL3B9EeTIWgrSnzDLzPnUZQeKnCuqX+7Yh3FpuHh6nqo9lPrU03skFlk; ELOQUA=GUID=AD28968D69264E07BFF3C32BE0F99213; ORA_FPC=id=f023f8e1-eb13-49c4-98b6-0ce6469ed8d6; WTPERSIST=; ak_bmsc=4E6BC4532B4CC396D12E2F1F93862924~000000000000000000000000000000~YAAQVfs7F5a5Zul+AQAAvfAA9Q5BJbbF2WDi3nsbTUvSSX6byjQX1S5tC8dgZO80k4rUzkbF71vNf5NhGYhH1L8u7vmiqKGo17oaU+gRvTsUPa9E9VZJU07/oiDkaGeSabjDUGL1vt9dpsV7qMvHOgRxeWQUvrxkz2B1RWN1g5u09KLQ6VFkpLEQDvj5CXGatxr3ZHq6NY+qCO+lCJlBn0U3buJduImaQuR65BqRlDBE/zi4YfohCyosLhZxLHiKpi7DCLhw39TlN+S4oe4NLdYbbsRNSKeiav79mL49HdIgktk0vaox2wmZTAgG6l/XKEvLTR+/NWaLkF773UFI9po/7NyZyVBnZbleQ6Ik/e+9bhVKwPsPNBHCn/oY72Egf9LmdDQeHh4UhkGEUEvuDae4UjQkDbRRNMKEWlvTbJ2VBPEMPuYvQ+enocsT8da6G6Hm5i72Uvlk4byh4wRobXmbILtYmLyWy1YaeAsnp3jE1Oa5YTC4V8nU8ze+8l5HV1hwdm6/5q9MfqGloFOBzg==; _gcl_au=1.1.82532865.1644787986; oraclelicense=141; OAMAuthnHintCookie=0@1644788034; AKA_A2=A; utag_main=v_id:017ef500ec2f00181b92ae2c859205078005807000bd0$_sn:1$_se:6$_ss:0$_st:1644789867907$ses_id:1644787985457%3Bexp-session$_pn:3%3Bexp-session; gpw_e24=https%3A%2F%2Fwww.oracle.com%2Fjava%2Ftechnologies%2Fjavase%2Fjavase8u211-later-archive-downloads.html; s_sq=%5B%5BB%5D%5D; s_nr=1644788076667-New; RT="z=1&dm=oracle.com&si=782e261c-c4cd-43b4-9691-69a249f76563&ss=kzlsargf&sl=3&tt=2tb&bcn=%2F%2F173bf108.akstat.io%2F&ld=1s5o&nu=qaz1psod&cl=1yuz&ul=1yx0&hd=1z3u"; bm_sv=4F868159B114822CD41C5C2FE3AB1707~LApspQY0/EtJhTq+usv+T3OqGuOcFt8kbkpjlW6vm/7fw0m9EX9CEBiT8/FnusQ6P0mmINaiid2aZdQjM+zreHoDJE3MhlQF3+qITCQ/u3l2tbyz7yBfrHyJ9zf7Ep4LS+FpCLwR9KsIt8WcgxcvoHqf35meBUwKWYY9ahoREN0='
 
 install 'Java SE Development Kit' 'jdk-17_macos-x64_bin.dmg' 'https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.dmg' \
   -H 'Connection: keep-alive' \
