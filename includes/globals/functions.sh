@@ -248,16 +248,16 @@ function install_configuration_file() {
 }
 
 function install_plugin_for () {
-   if $1 eq "atom"; then
       if apm list | grep "$1@"; then
           print_msg "log" "APM package $1 exists. Skipping..."
+   if [ "$1" = "atom" ]; then
       else
           apm install "$1"
       fi
    else
-      if $1 eq "vscode"; then
          if code --list-extensions "$1" | grep "$1" ; then
              print_msg "log" "VSCode’s $1 exists. Skipping..."
+      if [ "$1" = "vscode" ]; then
          else
              code --install-extension "$1"
          fi
