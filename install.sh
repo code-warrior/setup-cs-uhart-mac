@@ -323,7 +323,7 @@ install 'Visual Studio Code' 'VSCode-darwin-universal.zip' 'https://az764295.vo.
 print_msg "warn" "Add VS Code to your path for command line usage before continuing:"
 print_msg "log" "Launch VS Code"
 print_msg "log" "Open the command palette (CMD + SHIFT + P), then type 'shell command'"
-print_msg "log" "Choose 'Shell Command: Install \'code\' command in PATH'"
+print_msg "log" "Choose 'Shell Command: Install 'code' command in PATH'"
 print_msg "log" "Close VS Code"
 pause
 
