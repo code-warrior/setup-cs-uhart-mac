@@ -543,7 +543,6 @@ print_msg "log" "right hand corner of the login window: Host name, OS version nu
 print_msg "log" "IP address."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-print_msg "log" " "
 print_msg "log" "Show all filename extensions in Finder."
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
