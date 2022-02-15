@@ -108,7 +108,7 @@ function print_msg () {
 #
 function install_typeface () {
    if [[ -e "$HOME/Library/Fonts/$1" ]]; then
-      print_msg "warn"  "$2 is already installed. Skipping..."
+      print_msg "log"  "$2 is already installed. Skipping..."
    else
       print_msg "log" "Downloading the $2 typeface..."
       curl "$3" -o "$4"
