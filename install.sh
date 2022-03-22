@@ -219,7 +219,7 @@ install 'Firefox Developer Edition' 'Firefox 97.0b9.dmg' 'https://download-insta
   -H 'referer: https://www.mozilla.org/' \
   -H 'accept-language: en-US,en;q=0.9'
 
-# This is the Intel chip download. Go back to Microsoft’s site for a link to the M1 chip download.
+print_msg "warn" "The following download version of Edge is for the Intel chip version. Go back to Microsoft’s site for a link to the M1 chip download."
 install 'Microsoft Edge (97)' 'MicrosoftEdge-97.0.1072.76.pkg' 'https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-97.0.1072.76.pkg?platform=Mac&Consent=1&channel=Stable' \
   -H 'Connection: keep-alive' \
   -H 'Upgrade-Insecure-Requests: 1' \
@@ -235,7 +235,7 @@ install 'Microsoft Edge (97)' 'MicrosoftEdge-97.0.1072.76.pkg' 'https://officecd
   -H 'Referer: https://www.microsoft.com/' \
   -H 'Accept-Language: en-US,en;q=0.9'
 
-# This is the Intel chip download. Go back to Brave’s site for a link to the M1 chip download.
+print_msg "warn" "The following download version of Brave is for the Intel chip version. Go back to Brave’s site for a link to the M1 chip download."
 install 'Brave Browser' 'Brave-Browser.dmg' 'https://referrals.brave.com/latest/Brave-Browser.dmg' \
   -H 'authority: referrals.brave.com' \
   -H 'upgrade-insecure-requests: 1' \
